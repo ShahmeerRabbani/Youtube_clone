@@ -1,0 +1,61 @@
+.DropDown{
+    height: 98vh;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    bottom: 0;
+    right: 0;
+    margin-right: 90px;
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    z-index: 99;
+}
+
+/* Notification_Dropdown */
+
+.Notification_Dropdown{
+    height: 98vh;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    bottom: 0;
+    right: 0;
+    margin-right: 140px;
+    width: 450px;
+    background-color: #fff;
+    display: flex;
+    z-index: 99;
+}
+
+
+/* Create_Video_Dropdown */
+
+.CreateVideo_Dropdown{
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    top: 60px;
+    right: 0;
+    margin-right: 0px;
+    width: 200px;
+    background-color: #fff;
+    display: flex;
+    z-index: 99;
+}
+
+
+/* Microphone_Dropdown */
+
+.Microphone_Dropdown{
+    top: 40px;
+    left: 28%;
+    height: 70%;
+    width: 43%;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    background-color: #fff;
+    z-index: 99;
+}
