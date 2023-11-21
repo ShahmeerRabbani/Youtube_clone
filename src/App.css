@@ -16,15 +16,20 @@ body{
 }
 
 .side-body::-webkit-scrollbar{
-  width: 10px;
+  width: 8px;
   overflow-x: hidden;
 }
 
-/* .side-body::-webkit-scrollbar-track{
-  background: rgb(214, 206, 206); 
-} */
-.side-body::-webkit-scrollbar-thumb{
+.side-body:hover::-webkit-scrollbar-thumb{
   background: rgb(148, 146, 146); 
+  
+}
+.side-body:hover::-webkit-scrollbar{
+  width: 8px;
+}
+
+.side-body::-webkit-scrollbar-thumb{
+  background: #fff;
   border-radius: 10px;
 }
 
@@ -50,6 +55,7 @@ body{
 
 .header{
   display: flex;
+  justify-content: center;
   background-color: #ffffff;
   height: 60px;
   padding-left: 25px;
@@ -100,7 +106,7 @@ body{
 .parent_search{
   display: flex;
   justify-content: center;
-  width: 590px;
+  width: clamp(100px, 100%, 600px);
   height: 38px;
   border-radius: 100px;
   background-color: #f2f2f2;
@@ -319,6 +325,7 @@ body{
 
 
 .side-body{
+  flex: 0.9;
   background-color: rgb(255, 255, 255);
   overflow: scroll;
   padding-bottom: 50px;
@@ -333,25 +340,30 @@ body{
   font-weight: 300;
   word-spacing: inherit;
   line-height: normal;
-  border-bottom: 1px solid rgb(220, 214, 214);
+  /* border-bottom: 1px solid rgb(220, 214, 214); */
 }
 
 .first-row{
   height: 40px;
   display: flex;
   align-items: center;
+  text-align: center;
+  padding-left: 20px;
   cursor: pointer;
+  gap: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  width: 90%;
 }
 
 .first-row:hover{
-  background-color: #d1cece;
+  background-color: #f1f1f1;
 }
 
 .home-icon {
   display: flex;
-  margin-left: 14px;
-  margin-right: 14px;
-  height: 49px;
+  justify-content: center;
+  /* height: inherit; */
 }
 
 .second-row{
@@ -639,7 +651,6 @@ body{
 .explor-heading{
   text-transform: uppercase;
   margin-left: 25px;
-  color: #6b6868;
   font-weight: 700;
 }
 
@@ -688,31 +699,29 @@ body{
   font-weight: 300;
   word-spacing: inherit;
   line-height: normal;
-  border-bottom: 1px solid rgb(220, 214, 214);
 }
 
 .other-youtube{
   text-transform: uppercase;
   margin-left: 25px;
-  color: #6b6868;
   font-weight: 700;
 }
 
-.seventeen-row{
+.five-row{
   height: 40px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  gap: 15px;
 }
 
-.seventeen-row:hover{
+.five-row:hover{
   background-color: #d1cece;
 }
 
-.youtube-other{
+.five-icon{
   display: flex;
-  margin-left: 12px;
-  margin-right: 7px;
+  justify-content: center;
   height: 30px;
 }
 

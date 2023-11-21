@@ -3,12 +3,12 @@ import Head from '../head';
 import Sidebar from '../sidebar';
 import Content from '../Content';
 
-function MainContainer({isSidebarOpen, handleSizeToggle}) {
+function MainContainer({isSidebarOpen, handleSizeToggle, isSmallSidebar}) {
     return ( 
         <>
-        <Head handleSizeToggle={handleSizeToggle}/>
-        <div class="main-body">
-        <Sidebar isSidebarOpen={isSidebarOpen}/>
+        <Head handleSidebarToggleOpen={handleSizeToggle}/>
+        <div className="main-body">
+        <Sidebar isSidebarOpen={isSidebarOpen} isSmallSidebar={isSmallSidebar}/>
         <Content isSidebarOpen={isSidebarOpen}/>
         </div>
         </>

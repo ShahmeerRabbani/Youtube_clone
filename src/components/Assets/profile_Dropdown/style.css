@@ -48,7 +48,7 @@
 
 /* Microphone_Dropdown */
 
-.Microphone_Dropdown{
+/* .Microphone_Dropdown{
     top: 40px;
     left: 28%;
     height: 70%;
@@ -58,4 +58,86 @@
     display: flex;
     background-color: #fff;
     z-index: 99;
+} */
+
+.inner_Mike{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    /* background-color: #CC0000; */
+    cursor: pointer;
+    z-index: 99;
+    /* margin-bottom: 20px; */
+}
+
+.microphone_circle{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    position: absolute;
+    animation: 1s infinite Circling;
+    /* opacity: 0; */
+}
+
+.stopped{
+    animation: none;
+}
+@keyframes Circling {
+    from{
+        transform: scale(1);
+
+    }
+    to{
+        transform: scale(1.7);
+    }
+}
+
+.Cross{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.Cross:hover{
+    background-color: #f2f2f2;
+}
+
+
+
+/* Small-Sidebar------------------------------ */
+
+.Small-sidebar{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.small-home{
+display: flex;
+align-items: center;
+justify-content: end;
+flex-direction: column;
+height: 60px;
+font-size: 11px;
+font-weight: 400;
+line-height: 30px;
+margin-bottom: 15px;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.small-home:hover{
+    background-color: #f2f2f2;
 }

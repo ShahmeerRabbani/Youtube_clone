@@ -124,7 +124,7 @@ function Video({isSidebarOpen}) {
     ]
     return ( 
         <>
-        <div class="videos">
+        <div className="videos">
                     {Data.map((items, id)=>{
                         return(
                             <div key={id}>

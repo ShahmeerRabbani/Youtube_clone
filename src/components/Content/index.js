@@ -80,14 +80,14 @@ function Content({isSidebarOpen}) {
   return (
     <>
       <div
-        class="video-body"
+        className="video-body"
         // id={isDarkTheme ? 'dark-theme' : 'light-theme'}
       >
-        <div class="buttons">
+        <div className="buttons">
           {boxData.map((items, index) => {
             return (
               <div key={index} onClick={()=>handleItemClick(index)}>
-                <div class={`btn-1 ${index == activeIndex ? 'active' : ''}`} 
+                <div className={`btn-1 ${index == activeIndex ? 'active' : ''}`} 
                 style={{
                   backgroundColor: index === activeIndex ? 'black' : '#E9E9E9',
                   color: index === activeIndex ? 'White' : 'black',
