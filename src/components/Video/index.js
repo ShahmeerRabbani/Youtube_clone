@@ -13,7 +13,7 @@ function Video({isSidebarOpen}) {
         {
             id: 1,
             caption:{
-                first_title:"FAMILY GUY'S MOST OFFENSIVE JOKES",
+                first_title:"FAMILY GUY'S MOSTkkk OFFENSIVE JOKES",
                 ChannelName:"SidemenReacts",
                 third_title:"17M views • 1 vear ado",
             },
