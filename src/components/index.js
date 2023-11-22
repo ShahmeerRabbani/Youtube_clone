@@ -1,18 +1,20 @@
-import Head from "./head";
-import Content from "./Content";
-import Sidebar from "./sidebar";
-import Video from "./Video";
+import Head from "./MainContainer/head";
+import Content from "./MainContainer/Content";
+import Sidebar from "./MainContainer/sidebar";
+import Video from "./MainContainer/Content/Video";
 import MainContainer from "./MainContainer/main";
 import ProfileDropdown from "./Assets/profile_Dropdown";
 import NotificationDrawer from "./Assets/Notification_Dropdown";
 import CreateVideo from "./Assets/Create";
 import MicrophoneDropdown from "./Assets/Microphone";
-import ColumnComponentOne from "./sidebar/ColumnOne";
-import ColumnComponentTwo from "./sidebar/ColumnTwo";
-import ColumnComponentThree from "./sidebar/ColumnThree";
-import ColumnComponentFour from "./sidebar/ColumnFour";
-import ColumnComponntFive from "./sidebar/ColumnFive";
-import ColumnComponentSix from "./sidebar/ColumnSix";
+import ColumnComponentOne from "./MainContainer/sidebar/ColumnOne";
+import ColumnComponentTwo from "./MainContainer/sidebar/ColumnTwo";
+import ColumnComponentThree from "./MainContainer/sidebar/ColumnThree";
+import ColumnComponentFour from "./MainContainer/sidebar/ColumnFour";
+import ColumnComponntFive from "./MainContainer/sidebar/ColumnFive";
+import ColumnComponentSix from "./MainContainer/sidebar/ColumnSix";
+import MainPage from "./MainHomePage";
+import SubscriptionLayout from './Subscription';
 
 
 export{
@@ -30,5 +32,7 @@ export{
     ColumnComponentThree,
     ColumnComponentFour,
     ColumnComponntFive,
-    ColumnComponentSix
+    ColumnComponentSix,
+    MainPage,
+    SubscriptionLayout
 };

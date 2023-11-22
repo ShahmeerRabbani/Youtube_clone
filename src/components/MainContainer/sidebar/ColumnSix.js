@@ -1,5 +1,5 @@
 import React from 'react';
-import { feedback, help, reportHistory, settings } from '../../Images';
+import { feedback, help, reportHistory, settings } from '../../../Images';
 
 function ColumnComponentSix() {
 

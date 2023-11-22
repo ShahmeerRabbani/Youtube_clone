@@ -1,5 +1,5 @@
 // import React from 'react';
-// import { dp1, dp2, dp3, dp4, dp5, dp6 } from '../../Images';
+// import { dp1, dp2, dp3, dp4, dp5, dp6 } from '../../../Images';
 
 // function ColumnComponentThree() {
 //     return ( <>

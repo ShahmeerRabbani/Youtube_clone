@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Dropdown from '../Assets/profile_Dropdown';
-import NotificationDrawer from '../Assets/Notification_Dropdown';
-import CreateVideo from '../Assets/Create';
-import MicrophoneDropdown from '../Assets/Microphone';
-import { menu, YoutubeLogo, SearchIcon, Mike, addVideo, bell, profilePic } from '../../Images';
+import Dropdown from '../../Assets/profile_Dropdown';
+import NotificationDrawer from '../../Assets/Notification_Dropdown';
+import CreateVideo from '../../Assets/Create';
+import MicrophoneDropdown from '../../Assets/Microphone';
+import { menu, YoutubeLogo, SearchIcon, Mike, addVideo, bell, profilePic } from '../../../Images';
 
 function Head({handleSidebarToggleOpen}) {
 

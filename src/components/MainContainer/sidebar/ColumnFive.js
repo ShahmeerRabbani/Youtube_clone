@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStudio, youtubeKids, youtubeMusic, youtubeTv } from '../../Images';
+import { createStudio, youtubeKids, youtubeMusic, youtubeTv } from '../../../Images';
 
 
 function ColumnComponntFive() {

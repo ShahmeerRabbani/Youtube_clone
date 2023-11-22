@@ -1,6 +1,4 @@
 import React from 'react';
-import '../profile_Dropdown/style.css'
-
 
 function NotificationDrawer({isOpen}) {
     return ( <>

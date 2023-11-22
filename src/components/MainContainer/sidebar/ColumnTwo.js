@@ -1,5 +1,5 @@
 import React from 'react';
-import { history, liberary, like, watchLater } from '../../Images';
+import { history, liberary, like, watchLater } from '../../../Images';
 
 function ColumnComponentTwo() {
     const ColumnTwoData = [

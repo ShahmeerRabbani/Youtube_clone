@@ -1,5 +1,5 @@
 import React from 'react';
-import { gaming, sport } from '../../Images';
+import { gaming, sport } from '../../../Images';
 
 function ColumnComponentFour() {
 
