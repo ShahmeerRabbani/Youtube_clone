@@ -1,25 +1,22 @@
 // import logo from './logo.svg';
 import { useEffect, useState } from 'react';
 import MainContainer from '../MainContainer/main';
-import { useLocation } from 'react-router-dom';
 function MainPage() {
-
-    const location = useLocation();
-    console.log(location.pathname);
    
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const[isSmallSidebar, setIsSmallSidebar] = useState(false);
 
   const handleSidebarToggle = () =>{
-    if(isSidebarOpen){
-      setIsSidebarOpen(false);
-      setIsSmallSidebar(false);
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 1000) {
+      setIsSmallSidebar(prevState => !prevState); // Toggle only the small sidebar
+      return;
     }
-    else{
-      setIsSidebarOpen(true);
-      setIsSmallSidebar(true);
-    }
-  }
+
+    setIsSidebarOpen(prevState => !prevState);
+    setIsSmallSidebar(prevState => !prevState);
+  };
 
   // const handleSizeToggle = () => {
   //   setIsSidebarOpen(!isSidebarOpen);
@@ -27,20 +24,36 @@ function MainPage() {
 
   useEffect(()=>{
     const handleResize=()=>{
-      if(window.innerWidth<= 1100){
-        setIsSidebarOpen(true)
-        setIsSmallSidebar(true)
+      const width = window.innerWidth;
+
+      if (width > 1200) {
+        setIsSidebarOpen(false);
+        setIsSmallSidebar(false);
+      } else if (width > 1000 && width <= 1200) {
+        setIsSidebarOpen(true);
+        setIsSmallSidebar(true);
+      } else {
+        // For smaller screens (<= 1000)
+        setIsSidebarOpen(true);
+        setIsSmallSidebar(false);
       }
-      else{
-        setIsSidebarOpen(false)
-        setIsSmallSidebar(false)
-      }
+
+    // if (width < 876) {
+    //   setIsSidebarOpen(true);
+    //   setIsSmallSidebar(false);
+    // }
     };
 
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
   },[]);
+
+  useEffect(() => {
+    if (window.innerWidth <= 1000) {
+      setIsSidebarOpen(true); // Close sidebar if initially on mobile screen
+    }
+  }, []); // Empty dependency array for initial load only
   return (
      <div className="body">
         <MainContainer

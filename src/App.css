@@ -34,17 +34,8 @@ body{
 }
 
 .video-body::-webkit-scrollbar{
-  width: 10px;
   overflow-x: hidden;
   overflow-y: hidden;
-}
-
-/* .video-body::-webkit-scrollbar-track{
-  background: rgb(214, 206, 206); 
-} */
-.video-body::-webkit-scrollbar-thumb{
-  background: rgb(148, 146, 146); 
-  border-radius: 10px;
 }
 
 .body{
@@ -133,12 +124,17 @@ body{
   font-style: inherit;
   padding-left: 15px;
 }
-.search-icon{
+.search-icon, .searchMob-icon{
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
   cursor: pointer;
+}
+
+.searchMob-icon img{
+  height: 25px;
+  width: 25px;
 }
 
 .search-icon img{
@@ -185,26 +181,41 @@ body{
   flex: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .add-video{
-  height: 22px;
+  height: 40px;
+  width: 40px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   margin-left: 90px;
+  border-radius: 100px;
+}
+
+.add-video:hover{
+  background-color: #d1cece;
 }
 
 .bell-icon{
-  height: 27px;
+  height: 40px;
+  width: 40px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  margin-left: 30px;
+  border-radius: 100px;
+}
+
+.bell-icon:hover{
+  background-color: #d1cece;
+  border-radius: 100px;
 }
 
 .email-pic{
   display: flex;
-  margin-left: 30px;
   cursor: pointer;
 }
 
@@ -230,6 +241,7 @@ body{
 }
 
 .buttons{
+  margin-top: 10px;
   padding: 0 10px;
   overflow-x: scroll;
   background-color: #ffffff;
@@ -239,8 +251,8 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   color: rgb(0, 0, 0);
-  border-top: 1px solid rgb(202, 202, 202);
-  box-shadow: 2px 2px 2px rgb(222, 226, 227);
+  /* border-top: 1px solid rgb(202, 202, 202); */
+  /* box-shadow: 2px 2px 2px rgb(222, 226, 227); */
 }
 
 .btn-1:hover{

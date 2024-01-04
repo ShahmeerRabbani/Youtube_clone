@@ -1,0 +1,29 @@
+.WatchHistory{
+    flex: 1;
+    padding-left: 20px;
+    text-align: justify;
+}
+
+.watch-menu{
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    margin-top: 10px;
+    border-radius: 100px;
+    background: #f2f2f2;   
+}
+
+.watch-menu:hover{
+    background: #E5E5E5;
+}
+
+.watchEvents{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}

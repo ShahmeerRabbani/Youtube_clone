@@ -2,58 +2,77 @@ import { Box, Modal, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 // import { Mike } from '../../../Images';
 import CloseIcon from '@mui/icons-material/Close';
+import { ClickSound, closesound } from '../../../Images';
 // import { keyframes } from 'styled-components';
 
 function MicrophoneDropdown({isOpen, onClose}) {
 
+
+    // const [audio] = useState(new Audio()); // Create an audio element
+    // const [closeAudio] = useState(new Audio(closesound)); // Create an audio element
     const [isAnimating, setIsAnimating] = useState(true);
     const [backColor, setBackColor] = useState('#cc0000')
     const [fillColor , setFillColor] = useState('white');
     const [microphoneText, setMicrophoneText] = useState("Listening...")
     const [rerender, setRerender] = useState(false); // State to trigger re-render
+    const [intervalId, setIntervalId] = useState(null);
+
+    // const playSound = () => {
+    //     audio.src = ClickSound; 
+    //     audio.currentTime = 0; // Reset audio to start if it's already playing
+    //     audio.play();
+    // };
+    // const closeSound = () => {
+    //     closeAudio.currentTime = 0; // Reset audio to start if it's already playing
+    //     closeAudio.play();
+    // };
 
     const resetStateAndInterval = () => {
         setIsAnimating(true);
         setBackColor('#cc0000');
         setFillColor('white');
-        setMicrophoneText("Listening...");
-    
-        clearInterval(interval); // Clear previous interval
-        startInterval(); // Start a new interval
-      };
-    
-      let interval;
-    
+        setMicrophoneText('Listening...');
 
-  
-      const startInterval = () => {
-        interval = setInterval(() => {
-          setIsAnimating(false); // Stop the animation after a certain time
-    
-          const newBackColor = backColor === '#cc0000' ? '#CECECE' : '#cc0000';
-          setBackColor(newBackColor);
-    
-          const newColor = fillColor === 'white' ? 'black' : 'white';
-          setFillColor(newColor);
-    
-          setMicrophoneText("Microphone off. Try again.");
+        if (intervalId) {
+            clearInterval(intervalId); // Clear previous interval
+        }
+
+        const newIntervalId = setInterval(() => {
+            setIsAnimating(false); // Stop the animation after a certain time
+
+            const newBackColor = backColor === '#cc0000' ? '#CECECE' : '#cc0000';
+            setBackColor(newBackColor);
+
+            const newColor = fillColor === 'white' ? 'black' : 'white';
+            setFillColor(newColor);
+
+            setMicrophoneText('Microphone off. Try again.');
+
+            // closeSound()
         }, 10000); // Change 10000 to the duration you want the animation to run (in milliseconds)
-      };
-    
-      useEffect(() => {
-        startInterval();
-    
-        return () => clearInterval(interval); // Clean up the interval on unmounting or re-run
-      }, [backColor, fillColor, rerender]);
 
-const handlefillColor = () => {
-    const newColor = fillColor === 'white' ? 'black' : 'white';
-    setFillColor(newColor);
-    const newBackColor = backColor === '#cc0000' ? '#CECECE' : '#cc0000';
-    setBackColor(newBackColor);
-    setRerender(prevState => !prevState);
-    resetStateAndInterval()
-}
+        setIntervalId(newIntervalId);
+        // playSound();
+    };
+
+    const handlefillColor = () => {
+        const newColor = fillColor === 'white' ? 'black' : 'white';
+        setFillColor(newColor);
+        const newBackColor = backColor === '#cc0000' ? '#CECECE' : '#cc0000';
+        setBackColor(newBackColor);
+        resetStateAndInterval();
+    };
+
+    useEffect(() => {
+        resetStateAndInterval();
+
+        return () => {
+            if (intervalId) {
+                clearInterval(intervalId); // Clean up the interval on unmounting
+            }
+        };
+    }, []);
+
 
 const style = {
         display: 'flex',

@@ -29,6 +29,11 @@ import settings from './setting.png';
 import reportHistory from './report.png';
 import help from './help.png';
 import feedback from './feedback-26.png';
+import ClickSound from './ClickSound.wav';
+import ClickSoundtwo from './clicksound2.wav';
+import closesound from './closesound.wav';
+import myPic from './me.jpg'
+
 
 
 export{
@@ -62,5 +67,9 @@ export{
     settings,
     reportHistory,
     help,
-    feedback
+    feedback,
+    ClickSound,
+    ClickSoundtwo,
+    closesound,
+    myPic
 };

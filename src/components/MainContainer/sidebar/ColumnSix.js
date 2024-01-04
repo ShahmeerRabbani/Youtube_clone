@@ -38,7 +38,7 @@ function ColumnComponentSix() {
                 <div key={id}>
                     <div className='first-row' title={items.name}>
                         <div className="home-icon">
-                        <svg xmlns={"http://www.w3.org/2000/svg"} enable-background="new 0 0 24 24" height={25} viewBox="0 0 24 24" width={25} focusable="false" style={{pointerEvents: "none", display: "block", width: "100%", height: "100%",}}>{items.icone}</svg>
+                        <svg xmlns={"http://www.w3.org/2000/svg"} enable-background="new 0 0 24 24" height={25} width={25} focusable="false" style={{pointerEvents: "none", display: "block", width: "100%", height: "100%",}}>{items.icone}</svg>
                         </div>
                         <div>
                         <span>{items.name}</span>

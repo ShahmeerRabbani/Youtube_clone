@@ -6,7 +6,7 @@ import ColumnComponentFour from "./ColumnFour";
 import ColumnComponntFive from "./ColumnFive";
 import ColumnComponentSix from "./ColumnSix";
 
-function Sidebar({ isSidebarOpen, isSmallSidebar }) {
+function Sidebar({ isSidebarOpen, isSmallSidebar, handleComponentChange }) {
   const SmallData = [
     {
       id: 1,
@@ -62,12 +62,12 @@ function Sidebar({ isSidebarOpen, isSmallSidebar }) {
     <>
       {isSidebarOpen && (
         <div className="side-body">
-          <ColumnComponentOne />
+          <ColumnComponentOne handleComponentChange={handleComponentChange}/>
           <hr />
-          <ColumnComponentTwo />
+          <ColumnComponentTwo handleComponentChange={handleComponentChange}/>
           <hr />
           {/* <ColumnComponentThree/> */}
-          <ColumnComponentFour />
+          <ColumnComponentFour handleComponentChange={handleComponentChange}/>
           <hr />
           <ColumnComponntFive />
           <hr />

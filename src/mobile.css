@@ -1,0 +1,67 @@
+@media screen and (max-width: 786px) {
+    .header{
+        padding: 0 15px 0 0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .icon-bar{
+        display: none;
+    }
+
+    .youtube-icon{
+        margin: 0;
+    }
+
+    .input-div{
+        display: none;
+    }
+
+    .icon-div{
+        justify-content: end;
+    }
+
+    .add-video{
+        display: none;
+    }
+
+    .bell-icon{
+        display: none;
+    }
+
+    .searchMob-icon{
+        display: flex !important;
+        justify-content: end;
+        margin-right: 20px;
+    }
+
+    .ifram-video{
+        border-radius: 0 !important;
+    }
+
+    .video_1{
+        margin: 20px 0 0 0;
+    }
+
+    .three_dots{
+        display: flex;
+    }
+
+    .backButton{
+        display: flex;
+        justify-content: left;
+    }
+
+    .DropDown{
+        height: 92vh;
+        margin-right: 0px !important;
+        width: 100vw !important;
+    }
+
+    .profile_upper{
+        justify-content: left;
+    }
+
+    .profileUpper_caption{
+        margin-left: 20px;
+    }
+}
